@@ -94,7 +94,7 @@ describe(" /carValueInput API1 Sunny day scenarios", () => {
 });
 
 describe(" /carValueInput API 1 error test cases", () => {
-  test("should return status 400 and error invalid input, if model is not a string", async () => {
+  test("should return status 400 and error invalid input, if model input is null", async () => {
     const response = await request(app)
       .post("/carValueInput")
       .send({ model: null, year: 2020 });
@@ -102,7 +102,7 @@ describe(" /carValueInput API 1 error test cases", () => {
     expect(sum.carValue(null, 2020)).toBe("Invalid input");
   });
 
-  test("should return status 400 and error invalid input, if year is not a number", async () => {
+  test("should return status 400 and error invalid input, if year input is null", async () => {
     const response = await request(app)
       .post("/carValueInput")
       .send({ model: "Honda", year: null });
