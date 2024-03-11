@@ -27,12 +27,11 @@ jobs:
       # - run: npm test
 
       # Setup gcloud CLI
-      - name: 'Set up Cloud SDK'
+      
       - uses: google-github-actions/setup-gcloud@v2
         with:
           service_account_email: ${{ secrets.GCP_SA_EMAIL }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
-          version: '>= 363.0.0'
           project_id: github-actions-gcs
 
       - name: Deploy via GCS
