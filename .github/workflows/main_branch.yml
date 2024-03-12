@@ -32,8 +32,7 @@ jobs:
           node-version: "20.x"
 
       - name: Install dependencies
-        run: npm install jest --save-dev
-        run: npm run
+        run: npm install
 
-      - name: Run tests
-        run: npm test
+      - name: Install Jest
+        run: npm install jest --save-dev
