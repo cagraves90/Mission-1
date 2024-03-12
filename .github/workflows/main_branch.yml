@@ -31,6 +31,9 @@ jobs:
         with:
           node-version: "20.x"
 
+      - name: Change directory
+        run: cd Mission-1/tree/main/Mission_1_backend
+
       - name: Install dependencies
         run: npm install
 
