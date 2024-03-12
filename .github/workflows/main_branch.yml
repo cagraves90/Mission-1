@@ -34,5 +34,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Change directory
+        run: cd /home/runner/work/Mission-1/Mission_1_backend/package.json
+
       - name: Install Jest
         run: npm install jest --save-dev
